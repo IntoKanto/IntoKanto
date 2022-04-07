@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tallennetut havainnot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h3>Tehdyt ilmoitukset</h3>
+	<table>
+		<tr>
+		    <th>Tila</th>
+		    <th>Selitys</th>
+		    <th>Osoite</th>
+		    <th>Ilmoittaja</th>
+		    <th>Tyyppi</th>
+		</tr>  
+    	<tr th:each = "book : ${lista}">
+    		<td th:text="${book.tila}"></td>
+    		<td th:text="${book.havainto}"></td>
+    		<td th:text="${book.osoite}"></td> 
+    		<td th:text="${book.ilmoittaja}"></td>
+    		<td th:text="${book.tyyppi}"></td>				
+    	</tr>
+     </table>
+     
+     
+     
+     
+</body>
+</html>
